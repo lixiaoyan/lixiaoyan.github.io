@@ -17,6 +17,12 @@ a {
     border-bottom: 1px solid #ddd;
     text-decoration: none;
     color: #444;
+    transition: border 200ms;
+}
+
+a:hover, a:active, a:focus {
+    border-bottom: 1px solid #39f;
+    outline: none;
 }
 
 h1, h2, ul, dl, dd, p {
@@ -47,7 +53,7 @@ h2 {
     height: 2px;
     margin: 4px 0;
     vertical-align: baseline;
-    background-color: #ddd;
+    background-color: #eee;
 }
 
 .progress .inner {
