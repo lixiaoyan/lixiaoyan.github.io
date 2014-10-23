@@ -65,7 +65,7 @@ h2 {
 
 .card {
     overflow: hidden;
-    width: 360px;
+    max-width: 360px;
     margin: 40px auto;
     padding: 1.6em 3.2em;
     background-color: #f9f9f9;
@@ -106,4 +106,17 @@ h2 {
 
 .card.contacts ul {
     list-style: none;
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .card {
+        margin: 0;
+        box-shadow: none;
+    }
 }
