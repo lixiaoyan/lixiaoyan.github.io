@@ -115,6 +115,11 @@ h2 {
     list-style: none;
 }
 
+.card.footer p {
+  margin-top: -0.8em;
+  margin-bottom: -0.8em;
+}
+
 @media screen and (max-width: 480px) {
     body {
         margin: 0;
