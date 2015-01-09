@@ -1,134 +1,50 @@
 @font-face {
-    font-family: "Roboto Condensed";
-    font-style: normal;
-    font-weight: 400;
-    src: local("Roboto Condensed Regular"), local("RobotoCondensed-Regular"), url(./RobotoCondensed-Regular.woff);
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto Condensed Regular"), local("RobotoCondensed-Regular"), url(./RobotoCondensed-Regular.woff);
 }
 
 *, *:before, *:after {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 60px;
-    text-align: center;
-    line-height: 1.5;
-    font-family: "Roboto Condensed", sans-serif;
-    font-size: 16px;
-    color: #666;
-    background-color: #eee;
+  margin: 8em 1.6em;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-a {
-    border-bottom: 1px solid #ddd;
-    text-decoration: none;
-    color: #444;
-    transition: border 200ms;
-}
-
-a:hover, a:active, a:focus {
-    border-bottom: 1px solid #39f;
-    outline: none;
-}
-
-h1, h2, ul, dl, dd, p {
-    margin: 0;
-    padding: 0;
-}
-
-li, dt, dd {
-    margin-bottom: 0.2em;
-}
-
-h1, h2 {
-    font-weight: normal;
-    color: #444;
+.center {
+  text-align: center;
 }
 
 h1 {
-    font-size: 3em;
+  margin: 0;
+  font-size: 3em;
+  font-weight: normal;
+  line-height: 1.2;
 }
 
-h2 {
-    font-size: 1.5em;
+p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #616161;
 }
 
-.progress {
-    display: inline-block;
-    width: 100%;
-    height: 2px;
-    margin: 4px 0;
-    vertical-align: baseline;
-    background-color: #eee;
+a {
+  display: inline-block;
+  margin-top: 1.2em;
+  padding: 0.4em 1.2em;
+  border: 1px solid #512da8;
+  color: #ede7f6;
+  background-color: #673ab7;
+  border-radius: 3px;
+  text-decoration: none;
 }
 
-.progress .inner {
-    display: block;
-    height: 2px;
-    width: 0;
-    background-color: #39f;
-}
-
-.card {
-    overflow: hidden;
-    max-width: 360px;
-    margin: 40px auto;
-    padding: 1.6em 3.2em;
-    background-color: #f9f9f9;
-    box-shadow: 0 0 20px #ddd;
-}
-
-.card h2 {
-    margin-bottom: 0.6em;
-}
-
-.card.title {
-    padding-top: 3.2em;
-    padding-bottom: 3.2em;
-}
-
-.card.works dt {
-    font-size: 1.2em;
-}
-
-.card.works dd {
-    text-align: left;
-}
-
-.card.skills dl {
-    overflow: hidden;
-}
-
-.card.skills dt {
-    float: left;
-    clear: left;
-    width: 100px;
-    text-align: left;
-}
-
-.card.skills dd {
-    overflow: hidden;
-}
-
-.card.contacts ul {
-    list-style: none;
-}
-
-.card.footer p {
-  margin-top: -0.8em;
-  margin-bottom: -0.8em;
-}
-
-@media screen and (max-width: 480px) {
-    body {
-        margin: 0;
-    }
-}
-
-@media screen and (max-width: 360px) {
-    .card {
-        margin: 0;
-        box-shadow: none;
-    }
+a:active {
+  outline: none;
 }
