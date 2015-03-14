@@ -1,20 +1,19 @@
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.clearfix:before,
-.clearfix:after,
-.box:before,
-.box:after {
-  content: "";
-  display: table;
+
+.clearfix {
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+  
+  &:after {
+    clear: both;
+  }
 }
-.clearfix:after,
-.box:after {
-  clear: both;
-}
+
 body {
   margin: 0;
   font-size: 16px;
@@ -22,62 +21,64 @@ body {
   line-height: 1.6;
   background-color: #9575cd;
 }
+
 ::selection {
-  background-color: rgba(103, 58, 183, 0.2);
+  background-color: fade(#673ab7,20%);
 }
-h1,
-h2,
-p {
+
+h1, h2, p {
   margin: 0;
 }
-h1,
-h2 {
+
+h1, h2 {
   font-weight: normal;
 }
+
 h1 {
   font-size: 3em;
 }
+
 a {
   text-decoration: none;
 }
+
 .out {
   overflow: hidden;
   padding: 80px 120px;
-  min-width: 960px;
+  min-width: (720px + 2 * 120px);
 }
+
 .box {
   position: relative;
   width: 720px;
   height: 960px;
   margin: 0 auto;
   transform: rotate(-15deg);
+  
+  &:extend(.clearfix all);
 }
+
 .paper {
   display: flex;
   float: right;
   width: 360px;
   height: 480px;
   background-color: #fff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px fade(#000,20%);
+  
+  &:nth-child(1) { transform: translate(-60px,-80px); }
+  &:nth-child(2) { transform: translate(-80px,60px); }
+  &:nth-child(3) { transform: translate(80px,-60px); }
+  &:nth-child(4) { transform: translate(60px,80px); }
 }
-.paper:nth-child(1) {
-  transform: translate(-60px, -80px);
-}
-.paper:nth-child(2) {
-  transform: translate(-80px, 60px);
-}
-.paper:nth-child(3) {
-  transform: translate(80px, -60px);
-}
-.paper:nth-child(4) {
-  transform: translate(60px, 80px);
-}
+
 .text {
   flex: 1;
   align-self: center;
   margin: 40px;
   text-align: center;
 }
+
 .avatar {
   position: absolute;
   overflow: hidden;
@@ -90,16 +91,19 @@ a {
   margin: auto;
   background-image: url(/avatar.png);
   background-size: 100% 100%;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px fade(#000,20%);
   transition: transform 200ms;
 }
+
 .avatar:hover,
 .avatar:focus {
   transform: rotate(15deg) scale(1.2);
 }
+
 .avatar:active {
   transform: rotate(15deg) scale(1.1);
 }
+
 .avatar span {
   position: absolute;
   left: 0;
@@ -108,10 +112,11 @@ a {
   text-align: center;
   line-height: 2;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: fade(#000,60%);
   transform: translateY(2em);
   transition: transform 200ms;
 }
+
 .avatar:hover span,
 .avatar:focus span {
   transform: translateY(0);
