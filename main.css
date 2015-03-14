@@ -42,7 +42,7 @@ a {
 }
 .out {
   overflow: hidden;
-  padding: 80px 120px;
+  padding: 120px;
   min-width: 960px;
 }
 .box {
@@ -50,7 +50,6 @@ a {
   width: 720px;
   height: 960px;
   margin: 0 auto;
-  transform: rotate(-15deg);
 }
 .paper {
   display: flex;
@@ -92,13 +91,6 @@ a {
   background-size: 100% 100%;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   transition: transform 200ms;
-}
-.avatar:hover,
-.avatar:focus {
-  transform: rotate(15deg) scale(1.2);
-}
-.avatar:active {
-  transform: rotate(15deg) scale(1.1);
 }
 .avatar span {
   position: absolute;

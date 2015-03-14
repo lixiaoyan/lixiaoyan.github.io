@@ -44,7 +44,7 @@ a {
 
 .out {
   overflow: hidden;
-  padding: 80px 120px;
+  padding: 120px;
   min-width: (720px + 2 * 120px);
 }
 
@@ -53,7 +53,6 @@ a {
   width: 720px;
   height: 960px;
   margin: 0 auto;
-  transform: rotate(-15deg);
   
   &:extend(.clearfix all);
 }
@@ -93,15 +92,6 @@ a {
   background-size: 100% 100%;
   box-shadow: 0 0 20px fade(#000,20%);
   transition: transform 200ms;
-}
-
-.avatar:hover,
-.avatar:focus {
-  transform: rotate(15deg) scale(1.2);
-}
-
-.avatar:active {
-  transform: rotate(15deg) scale(1.1);
 }
 
 .avatar span {
