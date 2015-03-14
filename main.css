@@ -23,7 +23,7 @@ body {
   background-color: #81c784;
 }
 ::selection {
-  background-color: rgba(103, 58, 183, 0.2);
+  background-color: rgba(76, 175, 80, 0.2);
 }
 h1,
 h2,
@@ -109,10 +109,12 @@ a {
   line-height: 2;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
   transform: translateY(2em);
-  transition: transform 200ms;
+  transition: opacity 200ms, transform 200ms;
 }
 .avatar:hover span,
 .avatar:focus span {
+  opacity: 1;
   transform: translateY(0);
 }
