@@ -138,6 +138,7 @@ ul {
   padding: 0.8em 0;
 }
 .icon-list li a {
+  display: block;
   color: inherit;
 }
 .icon-list li .icon {
