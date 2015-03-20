@@ -216,7 +216,7 @@ ul {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: opacity 200ms, transform 200ms;
   opacity: 0;
-  transform: translateY(2em);
+  transform: translateY(10px);
 }
 .avatar:hover span,
 .avatar:focus span {
