@@ -180,13 +180,15 @@ ul {
   text-align: center;
   background-color: #e8f5e9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  transition: visibility 200ms, opacity 200ms;
+  transition: visibility 200ms, opacity 200ms, transform 200ms;
   visibility: hidden;
   opacity: 0;
+  transform: translateY(-20px);
 }
 .dialog[data-show] {
   visibility: visible;
   opacity: 1;
+  transform: translateY(0);
 }
 .avatar {
   position: absolute;
@@ -210,11 +212,11 @@ ul {
   text-align: center;
   line-height: 2;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: opacity 200ms, transform 200ms;
   opacity: 0;
   transform: translateY(2em);
-  transition: opacity 200ms, transform 200ms;
 }
 .avatar:hover span,
 .avatar:focus span {
