@@ -179,7 +179,7 @@ ul {
   padding: 40px;
   text-align: center;
   background-color: #e8f5e9;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: visibility 200ms, opacity 200ms;
   visibility: hidden;
   opacity: 0;
