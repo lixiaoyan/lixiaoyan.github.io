@@ -73,7 +73,7 @@ ul {
   padding: 40px;
   text-align: center;
   background-color: #e8f5e9;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 .paper:nth-child(1) {
   left: -60px;
@@ -200,7 +200,7 @@ ul {
   margin: auto;
   background-image: url(/avatar.png);
   background-size: 100% 100%;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 .avatar span {
   position: absolute;
