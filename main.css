@@ -211,6 +211,7 @@ ul {
   line-height: 2;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   opacity: 0;
   transform: translateY(2em);
   transition: opacity 200ms, transform 200ms;
