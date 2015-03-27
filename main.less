@@ -39,7 +39,9 @@ a {
   text-decoration: none;
   color: #388e3c;
 
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus {
     text-decoration: underline;
   }
 }
@@ -237,6 +239,7 @@ ul {
 }
 
 .avatar:hover span,
+.avatar:active span,
 .avatar:focus span {
   opacity: 1;
   transform: translateY(0);

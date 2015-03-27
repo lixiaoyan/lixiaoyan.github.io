@@ -38,7 +38,9 @@ a {
   text-decoration: none;
   color: #388e3c;
 }
-a:hover {
+a:hover,
+a:active,
+a:focus {
   text-decoration: underline;
 }
 ul {
@@ -219,6 +221,7 @@ ul {
   transform: translateY(10px);
 }
 .avatar:hover span,
+.avatar:active span,
 .avatar:focus span {
   opacity: 1;
   transform: translateY(0);
