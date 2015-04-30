@@ -12,10 +12,10 @@ body {
   background-color: #81c784;
 }
 ::-moz-selection {
-  background-color: rgba(76, 175, 80, 0.2);
+  background-color: rgba(33, 150, 243, 0.2);
 }
 ::selection {
-  background-color: rgba(76, 175, 80, 0.2);
+  background-color: rgba(33, 150, 243, 0.2);
 }
 h1,
 h2,
