@@ -16,6 +16,26 @@ body {
   background-color: fade(#2196f3,20%);
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 4px solid transparent;
+  background-clip: content-box;
+  background-color: #1b5e20;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+html::-webkit-scrollbar-corner,
+body::-webkit-scrollbar-corner {
+  background-color: #81c784;
+}
+
 h1, h2, p {
   margin: 0;
 }
