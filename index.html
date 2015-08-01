@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>IntPtr</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <input type="radio" name="card" class="radio" id="card-home" data-card-for="home" checked />
+    <input type="radio" name="card" class="radio" id="card-skills" data-card-for="skills" />
+    <input type="radio" name="card" class="radio" id="card-works" data-card-for="works" />
+    <input type="radio" name="card" class="radio" id="card-contacts" data-card-for="contacts" />
+    <article class="page">
+      <div class="box">
+        <div class="card-box" data-card="home">
+          <section class="card section section-home">
+            <div class="avatar">
+              <img src="./img/avatar.png" />
+            </div>
+            <h1>IntPtr</h1>
+            <p>I'm here.</p>
+          </section>
+        </div>
+        <div class="card-box" data-card="skills">
+          <section class="card section section-skills">
+            <h2>Skills</h2>
+          </section>
+        </div>
+        <div class="card-box" data-card="works">
+          <section class="card section section-works">
+            <h2>Works</h2>
+          </section>
+        </div>
+        <div class="card-box" data-card="contacts">
+          <section class="card section section-contacts">
+            <h2>Contacts</h2>
+          </section>
+        </div>
+      </div>
+    </article>
+    <nav class="nav-arrow" data-card-for="home">
+      <label for="card-contacts" class="left"><span class="icon material-icons">chevron_left</span></label>
+      <label for="card-skills" class="right"><span class="icon material-icons">chevron_right</span></label>
+    </nav>
+    <nav class="nav-arrow" data-card-for="skills">
+      <label for="card-home" class="left"><span class="icon material-icons">chevron_left</span></label>
+      <label for="card-works" class="right"><span class="icon material-icons">chevron_right</span></label>
+    </nav>
+    <nav class="nav-arrow" data-card-for="works">
+      <label for="card-skills" class="left"><span class="icon material-icons">chevron_left</span></label>
+      <label for="card-contacts" class="right"><span class="icon material-icons">chevron_right</span></label>
+    </nav>
+    <nav class="nav-arrow" data-card-for="contacts">
+      <label for="card-works" class="left"><span class="icon material-icons">chevron_left</span></label>
+      <label for="card-home" class="right"><span class="icon material-icons">chevron_right</span></label>
+    </nav>
+    <nav class="nav">
+      <ul>
+        <li><label for="card-home" data-card-for="home"><span>Home</span></label></li>
+        <li><label for="card-skills" data-card-for="skills"><span>Skills</span></label></li>
+        <li><label for="card-works" data-card-for="works"><span>Works</span></label></li>
+        <li><label for="card-contacts" data-card-for="contacts"><span>Contacts</span></label></li>
+      </ul>
+    </nav>
+  </body>
+</html>

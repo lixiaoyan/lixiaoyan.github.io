@@ -1,0 +1,297 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.6;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  perspective: 1000px;
+}
+
+body {
+  margin: 0;
+  background-color: #1a237e;
+}
+
+.radio {
+  display: none;
+}
+
+.page {
+  position: fixed;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  -webkit-transform: translateZ(-160px);
+  transform: translateZ(-160px);
+}
+
+.page, .page * {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  transition: -webkit-transform 500ms, transform 500ms;
+}
+
+.radio[data-card-for="home"]:checked ~ .page .box {
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
+.radio[data-card-for="skills"]:checked ~ .page .box {
+  -webkit-transform: rotateY(-90deg);
+  transform: rotateY(-90deg);
+}
+
+.radio[data-card-for="works"]:checked ~ .page .box {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+.radio[data-card-for="contacts"]:checked ~ .page .box {
+  -webkit-transform: rotateY(-270deg);
+  transform: rotateY(-270deg);
+}
+
+.card-box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: visibility 500ms, opacity 500ms;
+}
+
+.radio[data-card-for="home"]:checked ~ .page .card-box[data-card="home"],
+.radio[data-card-for="skills"]:checked ~ .page .card-box[data-card="skills"],
+.radio[data-card-for="works"]:checked ~ .page .card-box[data-card="works"],
+.radio[data-card-for="contacts"]:checked ~ .page .card-box[data-card="contacts"] {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.card-box:nth-child(1) {
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
+.card-box:nth-child(2) {
+  -webkit-transform: rotateY(90deg);
+  transform: rotateY(90deg);
+}
+
+.card-box:nth-child(3) {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.card-box:nth-child(4) {
+  -webkit-transform: rotateY(270deg);
+  transform: rotateY(270deg);
+}
+
+.card {
+  width: 320px;
+  height: 320px;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translate(-50%, -50%) translateZ(160px);
+  transform: translate(-50%, -50%) translateZ(160px);
+}
+
+.section {
+  position: relative;
+  padding: 40px;
+  padding-top: 60px;
+}
+
+.section h2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0;
+  font-size: 3em;
+  line-height: 0;
+  text-align: center;
+  color: #e91e63;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateZ(20px);
+  transform: translateZ(20px);
+}
+
+.section-home .avatar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  width: 120px;
+  height: 120px;
+  margin: -60px auto;
+  border-radius: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateZ(20px);
+  transform: translateZ(20px);
+}
+
+.section-home {
+  padding-top: 100px;
+}
+
+.section-home .avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.section-home h1 {
+  margin: 0;
+  font-size: 3em;
+  font-weight: normal;
+  text-align: center;
+}
+
+.section-home p {
+  margin: 0;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.nav-arrow {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 320px;
+  height: 320px;
+  margin: auto;
+  display: none;
+}
+
+.radio[data-card-for="home"]:checked ~ .nav-arrow[data-card-for="home"],
+.radio[data-card-for="skills"]:checked ~ .nav-arrow[data-card-for="skills"],
+.radio[data-card-for="works"]:checked ~ .nav-arrow[data-card-for="works"],
+.radio[data-card-for="contacts"]:checked ~ .nav-arrow[data-card-for="contacts"] {
+  display: block;
+}
+
+.nav-arrow .left,
+.nav-arrow .right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1em;
+  height: 1em;
+  margin: auto 80px;
+  font-size: 4em;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.2);
+  transition: color 200ms;
+}
+
+.nav-arrow .left:hover,
+.nav-arrow .right:hover {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.nav-arrow .left {
+  right: 100%;
+}
+
+.nav-arrow .right {
+  left: 100%;
+}
+
+.nav-arrow .icon {
+  display: block;
+  font-size: 1em;
+}
+
+.nav {
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 0;
+  font-size: 0.8em;
+}
+
+.nav ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.nav li {
+  display: inline-block;
+}
+
+.nav label {
+  position: relative;
+  display: block;
+  width: 60px;
+  padding: 10px 0;
+  text-align: center;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.4);
+  transition: color 200ms;
+}
+
+.radio[data-card-for="home"]:checked ~ .nav label[data-card-for="home"],
+.radio[data-card-for="skills"]:checked ~ .nav label[data-card-for="skills"],
+.radio[data-card-for="works"]:checked ~ .nav label[data-card-for="works"],
+.radio[data-card-for="contacts"]:checked ~ .nav label[data-card-for="contacts"] {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.nav label span {
+  display: block;
+  line-height: 2;
+}
+
+.nav label::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 100%;
+  transition: background-color 200ms;
+}
+
+.radio[data-card-for="home"]:checked ~ .nav label[data-card-for="home"]::after,
+.radio[data-card-for="skills"]:checked ~ .nav label[data-card-for="skills"]::after,
+.radio[data-card-for="works"]:checked ~ .nav label[data-card-for="works"]::after,
+.radio[data-card-for="contacts"]:checked ~ .nav label[data-card-for="contacts"]::after {
+  background-color: rgba(255, 255, 255, 0.8);
+}
