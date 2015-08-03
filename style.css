@@ -184,6 +184,34 @@ body {
   color: rgba(0, 0, 0, 0.8);
 }
 
+.section-home .links {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 40px;
+  padding: 0;
+  font-size: 0.9em;
+  text-align: center;
+  list-style: none;
+}
+
+.section-home .links li {
+  display: inline-block;
+}
+
+.section-home .links li:not(:last-child)::after {
+  content: " \b7 ";
+  margin: 0 5px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.section-home .links a {
+  display: inline-block;
+  text-decoration: none;
+  color: #e91e63;
+}
+
 .nav-arrow {
   position: fixed;
   z-index: 1;
