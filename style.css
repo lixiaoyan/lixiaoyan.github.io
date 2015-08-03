@@ -50,7 +50,8 @@ body {
   top: 0;
   width: 0;
   height: 0;
-  transition: -webkit-transform 500ms, transform 500ms;
+  -webkit-transition: -webkit-transform 500ms;
+  transition: transform 500ms;
 }
 
 .radio[data-card-for="home"]:checked ~ .page .box {
@@ -201,6 +202,12 @@ body {
 .radio[data-card-for="works"]:checked ~ .nav-arrow[data-card-for="works"],
 .radio[data-card-for="contacts"]:checked ~ .nav-arrow[data-card-for="contacts"] {
   display: block;
+}
+
+@media (max-width: 800px) {
+  .nav-arrow {
+    display: none !important;
+  }
 }
 
 .nav-arrow .left,
