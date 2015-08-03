@@ -167,6 +167,7 @@ body {
   position: relative;
   overflow: hidden;
   height: 100%;
+  border-radius: 2px;
 }
 
 .view-box::before,
