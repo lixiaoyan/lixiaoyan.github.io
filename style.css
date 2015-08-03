@@ -116,13 +116,30 @@ body {
 }
 
 .card {
+  position: relative;
   width: 320px;
   height: 320px;
   border-radius: 2px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  backface-visibility: hidden;
   -webkit-transform: translate(-50%, -50%) translateZ(160px);
   transform: translate(-50%, -50%) translateZ(160px);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  backface-visibility: hidden;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .section {
