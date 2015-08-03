@@ -144,12 +144,11 @@ body {
 
 .section {
   position: relative;
-  padding: 40px;
-  padding-top: 60px;
 }
 
 .section h2 {
   position: absolute;
+  z-index: 100;
   left: 0;
   right: 0;
   top: 0;
@@ -161,10 +160,56 @@ body {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   -webkit-transform: translateZ(20px);
   transform: translateZ(20px);
+  pointer-events: none;
+}
+
+.view-box {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.view-box::before,
+.view-box::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  height: 100%;
+  box-shadow: 0 0 40px 20px #fff;
+  pointer-events: none;
+}
+
+.view-box::before {
+  bottom: 100%;
+}
+
+.view-box::after {
+  top: 100%;
+}
+
+.view {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-height: 100%;
+  padding: 40px;
+  padding-top: 60px;
+}
+
+.view-placeholder {
+  -webkit-flex: 1;
+  flex: 1;
 }
 
 .section-home .avatar {
   position: absolute;
+  z-index: 100;
   left: 0;
   right: 0;
   top: 0;
@@ -173,19 +218,20 @@ body {
   height: 120px;
   margin: -60px auto;
   border-radius: 100%;
+  background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   -webkit-transform: translateZ(20px);
   transform: translateZ(20px);
-}
-
-.section-home {
-  padding-top: 100px;
 }
 
 .section-home .avatar img {
   display: block;
   width: 100%;
   height: 100%;
+}
+
+.section-home .view {
+  padding-top: 100px;
 }
 
 .section-home h1 {
@@ -202,11 +248,7 @@ body {
 }
 
 .section-home .links {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 40px;
+  margin: 0;
   padding: 0;
   font-size: 0.9em;
   text-align: center;
@@ -227,6 +269,68 @@ body {
   display: inline-block;
   text-decoration: none;
   color: #e91e63;
+}
+
+.section-works ul {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.section-works li {
+  width: 50%;
+}
+
+.section-works a {
+  display: block;
+  padding: 10px 0;
+  text-decoration: none;
+}
+
+.section-works img {
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.section-works h3 {
+  overflow: hidden;
+  margin: 0;
+  margin-top: 5px;
+  font-size: 1em;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.section-contacts ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.section-contacts li {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.section-contacts a {
+  display: inline-block;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.section-contacts a:hover {
+  text-decoration: underline;
 }
 
 .nav-arrow {
@@ -346,4 +450,44 @@ body {
 .radio[data-card-for="works"]:checked ~ .nav label[data-card-for="works"]::after,
 .radio[data-card-for="contacts"]:checked ~ .nav label[data-card-for="contacts"]::after {
   background-color: rgba(255, 255, 255, 0.8);
+}
+
+.iScrollHorizontalScrollbar {
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  margin: 3px;
+}
+
+.iScrollHorizontalScrollbar.iScrollBothScrollbars {
+  right: 9px;
+}
+
+.iScrollVerticalScrollbar {
+  position: absolute;
+  z-index: 100;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  margin: 3px;
+}
+
+.iScrollVerticalScrollbar.iScrollBothScrollbars {
+  bottom: 9px;
+}
+
+.iScrollIndicator {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.iScrollHorizontalScrollbar .iScrollIndicator {
+  height: 100%;
+}
+
+.iScrollVerticalScrollbar .iScrollIndicator {
+  width: 100%;
 }
