@@ -15,7 +15,6 @@ html {
 }
 
 body {
-  margin: 0;
   background-color: #1a237e;
   perspective: 1000px;
   -webkit-user-select: none;
