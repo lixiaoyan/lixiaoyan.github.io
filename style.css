@@ -169,24 +169,16 @@ body {
   border-radius: 2px;
 }
 
-.view-box::before,
-.view-box::after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  right: 0;
+.view-scroll {
+  position: relative;
+  overflow: hidden;
   height: 100%;
-  box-shadow: 0 0 40px 20px #fff;
-  pointer-events: none;
-}
-
-.view-box::before {
-  bottom: 100%;
-}
-
-.view-box::after {
-  top: 100%;
+  background:
+    linear-gradient(to bottom, #fff 30%, transparent 100%) top / 100% 40px local,
+    linear-gradient(to top, #fff 30%, transparent 100%) bottom / 100% 40px local,
+    radial-gradient(at top, rgba(0, 0, 0, 0.2) 0%, transparent 70%) top / 100% 12px scroll,
+    radial-gradient(at bottom, rgba(0, 0, 0, 0.2) 0%, transparent 70%) bottom / 100% 12px scroll;
+  background-repeat: no-repeat;
 }
 
 .view {
