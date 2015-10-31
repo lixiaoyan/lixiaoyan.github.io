@@ -5,7 +5,7 @@
 }
 html {
   font-size: 16px;
-  font-family: "Economica", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   line-height: 1.5;
 }
 .section {
@@ -34,7 +34,7 @@ html {
 .section h1 {
   margin: 0;
   font-size: 4em;
-  font-weight: 400;
+  font-weight: 300;
 }
 .section p {
   margin: 0;
