@@ -72,7 +72,10 @@ html {
     z-index: 2;
   }
 
-  &:hover, &:hover > & {
+  &.active,
+  &.active > &,
+  &:hover,
+  &:hover > & {
     &::before, &::after {
       opacity: 1;
       transition: opacity 300ms, transform 300ms;
@@ -92,12 +95,28 @@ html {
   width: 20em;
   height: 20em;
   transform: rotate(-45deg);
-}
 
-.header-inner {
-  width: 100%;
-  height: 100%;
-  transform: rotate(45deg);
+  .header-inner {
+    width: 100%;
+    height: 100%;
+    transform: rotate(45deg);
 
-  .center();
+    .center();
+  }
+
+  .header-content {
+    opacity: 1;
+    transition: opacity 500ms;
+  }
+
+  &.hide {
+    &.rect,
+    .rect {
+      box-shadow: none;
+    }
+
+    .header-content {
+      opacity: 0;
+    }
+  }
 }
