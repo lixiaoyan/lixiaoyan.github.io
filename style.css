@@ -36,10 +36,11 @@ html {
   margin: 0;
   font-size: 4em;
   font-weight: 200;
+  color: rgba(0, 0, 0, 0.8);
 }
 .section p {
   margin: 0;
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.6);
 }
 .rect {
   position: relative;
@@ -111,6 +112,10 @@ html {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+.header a {
+  text-decoration: none;
+  color: inherit;
 }
 .header .header-inner {
   width: 100%;
