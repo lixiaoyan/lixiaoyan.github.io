@@ -109,13 +109,11 @@ html {
 .header {
   width: 20em;
   height: 20em;
+  text-decoration: none;
+  color: inherit;
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
-}
-.header a {
-  text-decoration: none;
-  color: inherit;
 }
 .header .header-inner {
   width: 100%;
