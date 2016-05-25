@@ -1,0 +1,6 @@
+<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+  <g fill="transparent" stroke="#000" stroke-width="4" stroke-linecap="square">
+    <path d="M 15,10 l 10,0 l 0,40 l -10,0" />
+    <path d="M 45,10 l -10,0 l 0,40 l 10,0" />
+  </g>
+</svg>
