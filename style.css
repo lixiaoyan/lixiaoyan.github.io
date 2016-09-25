@@ -1,12 +1,12 @@
-html {
-  font-family: "Ropa Sans", sans-serif;
-  font-size: 14px;
-  line-height: 1.4;
-}
-html,
-body {
+html, body {
   overflow: hidden;
 }
+
+html {
+  font-family: "Ropa Sans", sans-serif;
+  font-size: 16px;
+}
+
 .box {
   position: fixed;
   left: 0;
@@ -14,90 +14,237 @@ body {
   top: 0;
   bottom: 0;
   overflow: hidden;
-}
-.background {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-transform: skew(-30deg);
-          transform: skew(-30deg);
-}
-.background.left {
-  right: 50%;
   background-color: #fff;
 }
-.background.right {
-  left: 50%;
-  background-color: #000;
+
+@-webkit-keyframes logo {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
+
+@keyframes logo {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .logo {
-  overflow: hidden;
   position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-transform: skew(-30deg);
-          transform: skew(-30deg);
-}
-.logo img {
-  position: absolute;
-  top: 50%;
-  height: 240px;
-  -webkit-transform: translate(-50%, -50%) skew(30deg);
-          transform: translate(-50%, -50%) skew(30deg);
-}
-.logo.left {
-  right: 50%;
-}
-.logo.left img {
-  left: 100%;
-}
-.logo.right {
   left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: logo 1s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+          animation: logo 1s cubic-bezier(0.55, 0.085, 0.68, 0.53);
 }
-.logo.right img {
-  left: 0;
-}
-@media (max-width: 640px) {
-  .logo img {
-    height: 120px;
-  }
-}
-.link {
-  position: absolute;
-  left: 4em;
-  top: 2em;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.link a {
+
+.logo img {
   display: block;
-  font-size: 18px;
-  color: inherit;
-  text-decoration: none;
+  height: 12rem;
 }
-.link a::before {
-  content: "/";
+
+.navs {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
 }
-@media (max-width: 640px) {
-  .link {
-    left: 2em;
+
+@-webkit-keyframes nav {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
-.copyright {
+
+@keyframes nav {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.nav {
   position: absolute;
-  right: 4em;
-  bottom: 2em;
+  width: 100vmax;
+  height: 100vmax;
+  margin: 2px;
+  outline: none;
+  text-decoration: none;
+  color: #000;
+  -webkit-animation: nav 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+          animation: nav 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+.nav span {
+  position: absolute;
+  margin: 2rem 3rem;
+  font-size: 2rem;
   color: #fff;
 }
-.copyright p {
-  margin: 0;
-  text-align: right;
+
+.nav.left {
+  right: 12rem;
+  top: -12rem;
 }
-@media (max-width: 640px) {
-  .copyright {
-    right: 2em;
+
+.nav.left span {
+  right: 0;
+  top: 0;
+}
+
+.nav.right {
+  left: 12rem;
+  bottom: -12rem;
+}
+
+.nav.right span {
+  left: 0;
+  bottom: 0;
+}
+
+.nav.top {
+  right: -12rem;
+  bottom: 12rem;
+}
+
+.nav.top span {
+  right: 0;
+  bottom: 0;
+}
+
+.nav.bottom {
+  left: -12rem;
+  top: 12rem;
+}
+
+.nav.bottom span {
+  left: 0;
+  top: 0;
+}
+
+.nav.placeholder {
+  background-color: #eceff1;
+}
+
+.nav.blog {
+  background-color: #2196f3;
+}
+
+.nav.resume {
+  background-color: #4caf50;
+}
+
+.lines {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+}
+
+@-webkit-keyframes line {
+  0% {
+    -webkit-transform: translate(-12rem, 12rem) scaleX(0);
+            transform: translate(-12rem, 12rem) scaleX(0);
+  }
+
+  100% {
+    -webkit-transform: translate(-12rem, 12rem) scaleX(1);
+            transform: translate(-12rem, 12rem) scaleX(1);
+  }
+}
+
+@keyframes line {
+  0% {
+    -webkit-transform: translate(-12rem, 12rem) scaleX(0);
+            transform: translate(-12rem, 12rem) scaleX(0);
+  }
+
+  100% {
+    -webkit-transform: translate(-12rem, 12rem) scaleX(1);
+            transform: translate(-12rem, 12rem) scaleX(1);
+  }
+}
+
+.line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  color: #000;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.line:nth-child(1) {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.line:nth-child(2) {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.line:nth-child(3) {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.line:nth-child(4) {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vmax;
+  height: 4px;
+  margin: -2px 0;
+  background-color: currentColor;
+  -webkit-transform: translate(-12rem, 12rem);
+          transform: translate(-12rem, 12rem);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-animation: line 2s cubic-bezier(0.19, 1, 0.22, 1);
+          animation: line 2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@supports (mix-blend-mode: difference) {
+  .lines {
+    mix-blend-mode: difference;
+  }
+
+  .line {
+    color: #fff;
   }
 }

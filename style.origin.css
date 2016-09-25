@@ -1,0 +1,201 @@
+html, body {
+  overflow: hidden;
+}
+
+html {
+  font-family: "Ropa Sans", sans-serif;
+  font-size: 16px;
+}
+
+.box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+@keyframes logo {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: logo 1s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+.logo img {
+  display: block;
+  height: 12rem;
+}
+
+.navs {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  transform: rotate(20deg);
+}
+
+@keyframes nav {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.nav {
+  position: absolute;
+  width: 100vmax;
+  height: 100vmax;
+  margin: 2px;
+  outline: none;
+  text-decoration: none;
+  color: #000;
+  animation: nav 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+
+.nav span {
+  position: absolute;
+  margin: 2rem 3rem;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.nav.left {
+  right: 12rem;
+  top: -12rem;
+}
+
+.nav.left span {
+  right: 0;
+  top: 0;
+}
+
+.nav.right {
+  left: 12rem;
+  bottom: -12rem;
+}
+
+.nav.right span {
+  left: 0;
+  bottom: 0;
+}
+
+.nav.top {
+  right: -12rem;
+  bottom: 12rem;
+}
+
+.nav.top span {
+  right: 0;
+  bottom: 0;
+}
+
+.nav.bottom {
+  left: -12rem;
+  top: 12rem;
+}
+
+.nav.bottom span {
+  left: 0;
+  top: 0;
+}
+
+.nav.placeholder {
+  background-color: #eceff1;
+}
+
+.nav.blog {
+  background-color: #2196f3;
+}
+
+.nav.resume {
+  background-color: #4caf50;
+}
+
+.lines {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  transform: rotate(20deg);
+}
+
+@keyframes line {
+  0% {
+    transform: translate(-12rem, 12rem) scaleX(0);
+  }
+
+  100% {
+    transform: translate(-12rem, 12rem) scaleX(1);
+  }
+}
+
+.line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  color: #000;
+  transform-origin: left;
+}
+
+.line:nth-child(1) {
+  transform: rotate(0deg);
+}
+
+.line:nth-child(2) {
+  transform: rotate(90deg);
+}
+
+.line:nth-child(3) {
+  transform: rotate(180deg);
+}
+
+.line:nth-child(4) {
+  transform: rotate(270deg);
+}
+
+.line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vmax;
+  height: 4px;
+  margin: -2px 0;
+  background-color: currentColor;
+  transform: translate(-12rem, 12rem);
+  transform-origin: right;
+  animation: line 2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@supports (mix-blend-mode: difference) {
+  .lines {
+    mix-blend-mode: difference;
+  }
+
+  .line {
+    color: #fff;
+  }
+}

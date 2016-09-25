@@ -1,3 +1,3 @@
 #!/bin/bash
 
-lessc --autoprefix ./style.less ./style.css
+postcss --use autoprefixer --output style.css style.origin.css
