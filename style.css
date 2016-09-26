@@ -299,6 +299,35 @@ html {
   }
 }
 
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+}
+
+.navs, .lines {
+  -webkit-animation: rotate 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          animation: rotate 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
 @supports (mix-blend-mode: difference) {
   .lines {
     mix-blend-mode: difference;
