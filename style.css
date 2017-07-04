@@ -14,6 +14,13 @@ html {
   }
 }
 
+body {
+  background-image: url(/background-blurred.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
 .box {
   position: fixed;
   left: 0;
@@ -55,7 +62,7 @@ html {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  border: 4px solid #eceff1;
+  border: 4px solid rgba(255, 255, 255, 0.2);
   transform: rotate(15deg);
 }
 
@@ -94,5 +101,5 @@ html {
   display: block;
   font-size: 1.5rem;
   text-decoration: none;
-  color: #263238;
+  color: #fff;
 }
