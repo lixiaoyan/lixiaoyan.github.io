@@ -17,10 +17,7 @@ html {
 }
 
 body {
-  background-color: #000;
-  background-image: url(/background.jpg);
-  background-position: center;
-  background-size: cover;
+  background-color: #3f51b5;
 }
 
 .box {
